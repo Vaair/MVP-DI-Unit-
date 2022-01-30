@@ -14,12 +14,14 @@
 		3AA5632B27A6A23F001BB947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA5632927A6A23F001BB947 /* LaunchScreen.storyboard */; };
 		3AA5634027A6A322001BB947 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5633F27A6A322001BB947 /* Comment.swift */; };
 		3AA5634627A6A67A001BB947 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5634527A6A67A001BB947 /* MainPresenter.swift */; };
-		3AA5634927A6B0FD001BB947 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5634827A6B0FD001BB947 /* ModuleBuilder.swift */; };
+		3AA5634927A6B0FD001BB947 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5634827A6B0FD001BB947 /* Assembly.swift */; };
 		3AA5634F27A6B52E001BB947 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5634E27A6B52E001BB947 /* MainPresenterTest.swift */; };
 		3AA5635127A6C33E001BB947 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5635027A6C33E001BB947 /* TableViewCell.swift */; };
 		3AA5635327A6C793001BB947 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5635227A6C793001BB947 /* NetworkService.swift */; };
 		3AA5635627A6D3C5001BB947 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5635527A6D3C5001BB947 /* DetailPresenter.swift */; };
 		3AA5635B27A6D440001BB947 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5635A27A6D440001BB947 /* DetailViewController.swift */; };
+		3AA5635E27A6DD1E001BB947 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA5635D27A6DD1E001BB947 /* Router.swift */; };
+		3AD75A1E27A730F600FC547A /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD75A1D27A730F400FC547A /* RouterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +45,14 @@
 		3AA5633627A6A27D001BB947 /* MVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AA5633F27A6A322001BB947 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		3AA5634527A6A67A001BB947 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
-		3AA5634827A6B0FD001BB947 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		3AA5634827A6B0FD001BB947 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		3AA5634E27A6B52E001BB947 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
 		3AA5635027A6C33E001BB947 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3AA5635227A6C793001BB947 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		3AA5635527A6D3C5001BB947 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		3AA5635A27A6D440001BB947 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3AA5635D27A6DD1E001BB947 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		3AD75A1D27A730F400FC547A /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA5634C27A6B4DC001BB947 /* MainModuleTests */,
+				3AD75A1D27A730F400FC547A /* RouterTest.swift */,
 			);
 			path = "MVP (+DI+Unit)Tests";
 			sourceTree = "<group>";
@@ -119,7 +124,8 @@
 		3AA5634227A6A645001BB947 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				3AA5634827A6B0FD001BB947 /* ModuleBuilder.swift */,
+				3AA5634827A6B0FD001BB947 /* Assembly.swift */,
+				3AA5635D27A6DD1E001BB947 /* Router.swift */,
 				3AA5635827A6D3D7001BB947 /* Detail */,
 				3AA5635727A6D3CF001BB947 /* Main */,
 				3AA5635427A6C7B7001BB947 /* Networking */,
@@ -303,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AA5635E27A6DD1E001BB947 /* Router.swift in Sources */,
 				3AA5632327A6A239001BB947 /* ViewController.swift in Sources */,
 				3AA5631F27A6A239001BB947 /* AppDelegate.swift in Sources */,
 				3AA5635627A6D3C5001BB947 /* DetailPresenter.swift in Sources */,
@@ -312,7 +319,7 @@
 				3AA5632127A6A239001BB947 /* SceneDelegate.swift in Sources */,
 				3AA5634627A6A67A001BB947 /* MainPresenter.swift in Sources */,
 				3AA5635127A6C33E001BB947 /* TableViewCell.swift in Sources */,
-				3AA5634927A6B0FD001BB947 /* ModuleBuilder.swift in Sources */,
+				3AA5634927A6B0FD001BB947 /* Assembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AD75A1E27A730F600FC547A /* RouterTest.swift in Sources */,
 				3AA5634F27A6B52E001BB947 /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

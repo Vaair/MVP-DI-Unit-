@@ -8,21 +8,23 @@
 import Foundation
 
 protocol MainPresenterProtocol{
-    init(view: MainViewProtocol, networkService: NetworkServiceProtocol) //для DI
+    init(view: MainViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol) //для DI
     func getComments()
     var comments: [Comment]? {get set}
+    func tapOnTheCell(comment: Comment?)
 }
 
 class MainPresenter: MainPresenterProtocol {
     weak var view: MainViewProtocol?
+    var router: RouterProtocol?
     let networkService: NetworkServiceProtocol!
     
     var comments: [Comment]?
     
-    required init(view: MainViewProtocol, networkService: NetworkServiceProtocol) {
+    required init(view: MainViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol) {
         self.view = view
         self.networkService = networkService
-        
+        self.router = router
         getComments()
     }
     
@@ -39,5 +41,9 @@ class MainPresenter: MainPresenterProtocol {
                 }
             }
         }
+    }
+    
+    func tapOnTheCell(comment: Comment?) {
+        router?.showDetail(comment: comment)
     }
 }

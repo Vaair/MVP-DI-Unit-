@@ -22,11 +22,22 @@ class DetailViewController: UIViewController{
         return label
     }()
     
+    var popButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Pop", for: .normal)
+        button.sizeToFit()
+        button.setTitleColor(.red, for: .normal)
+        button.addTarget(self, action: #selector(popAction), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
         arrangeLabel()
+        arrangeButton()
         presenter.setComment()
     }
     
@@ -41,6 +52,17 @@ class DetailViewController: UIViewController{
             textLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             textLabel.widthAnchor.constraint(equalTo: view.widthAnchor),
             textLabel.heightAnchor.constraint(equalTo: view.heightAnchor)])
+    }
+    
+    private func arrangeButton(){
+        view.addSubview(popButton)
+        NSLayoutConstraint.activate([
+            popButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            popButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 100)])
+    }
+    
+    @objc func popAction(){
+        presenter.popToRoot()
     }
 }
 
